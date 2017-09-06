@@ -13,7 +13,9 @@ M indicates the number of input feature map, N indicates the number of output ch
 
 This MXNet implementation is based on François Chollet's keras version. Furthermore, I also refered one implementation from [u1234x1234](https://github.com/u1234x1234/mxnet-xception), but my version is more compact. I also attach the training code if you want train your own data with Xception archetecuture by yourself. Of course, if you just want to use the pretrained model by keras with MXNet, you can refer the python code from [u1234x1234's repo](https://github.com/u1234x1234/mxnet-xception/blob/master/keras2mxnet.py).
 
-In original paper, author deploys Xception on 60 NVIDIA K80 GPUs for training ImageNet dataset. The ImageNet experiments took approximately 3 days. However, I only have 4 GPUs. I'm afraid the computational effiency on MXNet. I'm not sure whether MXNet has any optimization for depthwise separable convolution or not. If there is some more efficient implementation or api from MXNet, please let me know. I'm appreciat e for your kindness.
+In original paper, author deploys Xception on 60 NVIDIA K80 GPUs for training ImageNet dataset. The ImageNet experiments took approximately 3 days. However, I only have 4 GPUs. I'm afraid the computational effiency on MXNet. I'm not sure whether MXNet has any optimization for depthwise separable convolution or not. If there is some more efficient implementation or api from MXNet, please let me know. I'm appreciate for your kindness.
+
+It is worth noting that I decrease the filter_list from [64, 128, 256, 728, 1024, 1536, 2048] (original version) to [64, 64, 128, 364, 512, 768, 1024] (smaller one). It is just because of computational efficency. Moreover, different from original version, I add dropout layer followed the last global average pooling layer.  
 
 #Requirements
 
