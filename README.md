@@ -4,14 +4,14 @@ This is a [MXNet](http://mxnet.io/) implementation of Xception architecture as d
 
 ![](title.png)
 
-The author's keras implementation can be found in the [https://github.com/fchollet/keras/tree/master/keras/applications](https://github.com/fchollet/keras/blob/master/keras/applications/xception.py) repo on GitHub.
+The author's keras implementation can be found in his [repo](https://github.com/fchollet/keras/blob/master/keras/applications/xception.py) on GitHub.
 
 This is an illustration of Depthwise Separable Convolution with Depthwise convolution and Pointwise convolution.
 
 ![](Depthwise_Separable_Convolution.png)
 M indicates the number of input feature map, N indicates the number of output channel.
 
-This MXNet implementation is based on François Chollet's keras version. Furthermore, I also refered one implementation from [u1234x1234](https://github.com/u1234x1234/mxnet-xception), but my version is more compact. I also attach the training code if you want train your own data with Xception archetecuture by yourself. Of course, if you just want to use the pretrained model by keras with MXNet, you can refer the python code from [https://github.com/u1234x1234/mxnet-xception/blob/master/keras2mxnet.py].
+This MXNet implementation is based on François Chollet's keras version. Furthermore, I also refered one implementation from [u1234x1234](https://github.com/u1234x1234/mxnet-xception), but my version is more compact. I also attach the training code if you want train your own data with Xception archetecuture by yourself. Of course, if you just want to use the pretrained model by keras with MXNet, you can refer the python code from [u1234x1234's repo](https://github.com/u1234x1234/mxnet-xception/blob/master/keras2mxnet.py).
 
 In original paper, author deploys Xception on 60 NVIDIA K80 GPUs for training ImageNet dataset. The ImageNet experiments took approximately 3 days. However, I only have 4 GPUs. I'm afraid the computational effiency on MXNet. I'm not sure whether MXNet has any optimization for depthwise separable convolution or not. If there is some more efficient implementation or api from MXNet, please let me know. I'm appreciat e for your kindness.
 
