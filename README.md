@@ -3,13 +3,11 @@
 This is a [MXNet](http://mxnet.io/) implementation of Xception architecture as described in the paper [Xception: Deep Learning with Depthwise Separable Convolutions](http://openaccess.thecvf.com/content_cvpr_2017/papers/Chollet_Xception_Deep_Learning_CVPR_2017_paper.pdf)  proposed by François Chollet at CVPR 2017 from [google](https://research.googleblog.com/2017/07/google-at-cvpr-2017.html).
 
 ![](title.png)
-
 The author's keras implementation can be found in the [https://github.com/fchollet/keras/tree/master/keras/applications](https://github.com/fchollet/keras/blob/master/keras/applications/xception.py) repo on GitHub.
 
 This is an illustration of Depthwise Separable Convolution with Depthwise convolution and Pointwise convolution.
 
 ![](Depthwise_Separable_Convolution.png)
-
 M indicates the number of input feature map, N indicates the number of output channel.
 
 This MXNet implementation is based on François Chollet's keras version. Furthermore, I also refered one implementation from [https://github.com/u1234x1234/mxnet-xception], but my version is more compact. I also attach the training code if you want train your own data with Xception archetecuture by yourself. Of course, if you just want to use the pretrained model by keras with MXNet, you can refer the python code from [https://github.com/u1234x1234/mxnet-xception/blob/master/keras2mxnet.py].
