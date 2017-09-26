@@ -31,7 +31,7 @@ Imagenet 1000 class dataset with 1.2 million images. Because this dataset is abo
 
 For data preparation, you can refer [my pervious part of densenet](https://github.com/bruinxiong/densenet.mxnet) or you can also visit the repo of [Wei Wu](https://github.com/tornadomeet/ResNet). In his page, there is a very detailed information about how to prepare your data. 
 
-When you finised data preparation, please make sure the data locates the same folder of source codes. You also need to change path of path_imgrec in line 65 and line 89 of train_xception.py. Then you can run the training cmd just like this (here, I use 4 gpus for training):
+When you finised data preparation, please make sure the data locates the same folder of source codes. You also need to change path of path_imgrec in line 53 and line 77 of train_xception.py. Then you can run the training cmd just like this (here, I use 4 gpus for training):
 
 python -u train_xception.py --data-dir data/imagenet --data-type imagenet --batch-size 256 --gpus=0,1,2,3
 
