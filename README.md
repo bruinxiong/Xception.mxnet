@@ -17,17 +17,17 @@ In original paper, author deploys Xception on 60 NVIDIA K80 GPUs for training Im
 
 It is worth noting that I decrease the filter_list from [64, 128, 256, 728, 1024, 1536, 2048] (original version) to [64, 64, 128, 364, 512, 768, 1024] (smaller one). It is just because of computational efficency. Moreover, different from original version, I add dropout layer followed the last global average pooling layer.  
 
-#Requirements
+## Requirements
 
 Install MXNet(0.8.0 or later version) on GPUs mechine with NVIDIA CUDA 8.0, and it's better also installed with [cuDNN v5](https://developer.nvidia.com/cudnn) or later version (I'm not testing cuDNN v7).
 
-#Data
+## Data
 
 ImageNet'12 dataset
 
 Imagenet 1000 class dataset with 1.2 million images. Because this dataset is about 120GB, so you have to download by yourself. Sorry for this inconvenience.
 
-#How to Train
+## How to Train
 
 For data preparation, you can refer [my pervious part of densenet](https://github.com/bruinxiong/densenet.mxnet) or you can also visit the repo of [Wei Wu](https://github.com/tornadomeet/ResNet). In his page, there is a very detailed information about how to prepare your data. 
 
@@ -37,7 +37,7 @@ python -u train_xception.py --data-dir data/imagenet --data-type imagenet --batc
 
 Maybe you should change batch-size from 256 to 128 due to the memory size of GPU.
 
-#How to retrain
+## How to retrain
 
 When we want to train the large dataset and hope to change learning rate manually, or the machine is suddenly shutdown due to some reason, of course, we definitely hope we can continue to train model with previous trained weights. Then, your can use this cmd:
 
@@ -45,13 +45,13 @@ python -u train_xception.py --data-dir data/imagenet --data-type imagenet --batc
 
 This means you can retrain your xception model from epoch 50 and change lr=0.001 using 4 GPU.
 
-#Training curves
+## Training curves
 
 The training procedure is ongoing. The computational efficency is not optimistic. So, I hope anyone who are mxnet fun can test this code with me. When I finish, I will update more information about training and validation.
 
 TO BE CONTINUE
 
-#Reference
+## Reference
 
 [1] François Chollet. "Xception: Deep Learning with Depthwise Separable Convolutions" http://openaccess.thecvf.com/content_cvpr_2017/papers/Chollet_Xception_Deep_Learning_CVPR_2017_paper.pdf
 
