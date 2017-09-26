@@ -49,7 +49,7 @@ This means you can retrain your xception model from epoch 50 and change lr=0.001
 
 The training procedure is ongoing. The computational efficency is not optimistic. So, I hope anyone who are mxnet fun can test this code with me. When I finish, I will update more information about training and validation.
 
-TO BE CONTINUE
+#### TO BE CONTINUE
 
 ## Reference
 
